@@ -55,3 +55,13 @@ Widget _buildSuggestions() {
         return _buildRow(_suggestions[index]);
       });
 }
+
+//lib/main.dart (_buildRow)
+Widget _buildRow(WordPair pair) {
+  return ListTile(
+    title: Text(
+      pair.asPascalCase,
+      style: _biggerFont,
+    ),
+  );
+}
