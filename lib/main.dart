@@ -25,12 +25,16 @@ class MyApp extends StatelessWidget {
   }
 }
 
-lib/main.dart (RandomWordsState)
+//lib/main.dart (RandomWordsState)
 class RandomWordsState extends State<RandomWords> {
-  // TODO Add build() method
+  @override
+  Widget build(BuildContext context) {
+    final wordPair = WordPair.random();
+    return Text(wordPair.asPascalCase);
+  }
 }
 
-lib/main.dart (RandomWords)
+//lib/main.dart (RandomWords)
 class RandomWords extends StatefulWidget {
   @override
   RandomWordsState createState() => RandomWordsState();
