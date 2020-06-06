@@ -29,3 +29,9 @@ lib/main.dart (RandomWordsState)
 class RandomWordsState extends State<RandomWords> {
   // TODO Add build() method
 }
+
+lib/main.dart (RandomWords)
+class RandomWords extends StatefulWidget {
+  @override
+  RandomWordsState createState() => RandomWordsState();
+}
