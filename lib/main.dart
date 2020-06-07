@@ -82,6 +82,8 @@ class RandomWordsState extends State<RandomWords> {
 // #docregion RWS-var
 
   void _pushSaved() {
+    Navigator.of(context).push(
+    );
   }
 }
 // #enddocregion RWS-var
