@@ -79,6 +79,7 @@ class RandomWordsState extends State<RandomWords> {
         ],
       ),
       body: _buildSuggestions(),
+      backgroundColor: Colors.blueGrey[200],
     );
   }
 // #enddocregion RWS-build
