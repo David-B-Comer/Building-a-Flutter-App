@@ -53,7 +53,7 @@ class RandomWordsState extends State<RandomWords> {
         pair.asPascalCase,
         style: _biggerFont,
       ),
-      trailing: Icon(   // Add the lines from here...
+      trailing: Icon(
         alreadySaved ? Icons.favorite : Icons.favorite_border,
         color: alreadySaved ? Colors.red : Colors.white,
       ),
@@ -81,7 +81,7 @@ class RandomWordsState extends State<RandomWords> {
         ],
       ),
       body: _buildSuggestions(),
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.black12,
     );
   }
 // #enddocregion RWS-build
