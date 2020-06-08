@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.blueGrey[800],
         textTheme: Typography(platform: TargetPlatform.iOS).white,
-
       ),
       home: RandomWords(),
     );
@@ -84,14 +83,14 @@ class RandomWordsState extends State<RandomWords> {
       backgroundColor: Colors.black12,
     );
   }
-// #enddocregion RWS-build
-// #docregion RWS-var
+  // #enddocregion RWS-build
 
   void _pushSaved() {
     Navigator.of(context).push(
       MaterialPageRoute<void>(
+        // Add 20 lines from here...
         builder: (BuildContext context) {
-          final Iterable<ListTile> tiles = _saved.map(
+          final tiles = _saved.map(
                 (WordPair pair) {
               return ListTile(
                 title: Text(
@@ -101,22 +100,23 @@ class RandomWordsState extends State<RandomWords> {
               );
             },
           );
-          final List<Widget> divided = ListTile
-              .divideTiles(
+          final divided = ListTile.divideTiles(
             context: context,
             tiles: tiles,
-          )
-              .toList();
+          ).toList();
+
           return Scaffold(
             appBar: AppBar(
               title: Text('Saved Suggestions'),
             ),
             body: ListView(children: divided),
+            backgroundColor: Colors.black12,
           );
         },
       ),
     );
   }
+// #docregion RWS-var
 }
 // #enddocregion RWS-var
 
